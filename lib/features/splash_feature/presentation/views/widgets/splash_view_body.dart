@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:note_app/features/note_feature/presentation/views/notes_view.dart';
+import 'package:note_app/features/home/presentation/views/home_view.dart';
+// import 'package:note_app/features/note_feature/presentation/views/notes_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -15,7 +16,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const NotesView()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const HomeView()));
     });
   }
 
