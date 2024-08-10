@@ -9,6 +9,7 @@ import 'constant.dart';
 import 'features/note_feature/cubits/notes/notes_cubit.dart';
 import 'features/note_feature/model/note_model.dart';
 // import 'features/note_feature/presentation/views/notes_view.dart';
+import 'features/student_feature/model/student_model.dart';
 import 'simple_bloc_observer.dart';
 
 void main() async {
@@ -19,6 +20,8 @@ void main() async {
 
   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
+  Hive.registerAdapter(StudentModelAdapter());
+  await Hive.openBox<NoteModel>(kStudentsBox);
 
   runApp(EasyLocalization(
     supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],
