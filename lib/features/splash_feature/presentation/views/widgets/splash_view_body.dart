@@ -41,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           ), // Replace with your splash image
         ),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.7,
@@ -51,21 +51,24 @@ class _SplashViewBodyState extends State<SplashViewBody> {
               child: DefaultTextStyle(
                 style: const TextStyle(
                   color: Color.fromARGB(255, 134, 77, 21),
-                  fontSize: 18.0,
+                  fontSize: 19.0,
                   fontFamily: 'Agne',
                 ),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                        textAlign:
-                            TextAlign.right, // Aligns the text to the right
-                        speed: const Duration(milliseconds: 60),
-                        'قال رسول الله صلى الله عليه وسلم:الماهر بالقرآن مع السفرة الكرام البررة، والذي يقرأ القرآن ويتتعتع فيه وهو عليه شاق له أجران'),
-                  ],
-                  isRepeatingAnimation: false,
-                  // onTap: () {
-                  //   print("Tap Event");
-                  // },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                          textAlign:
+                              TextAlign.right, // Aligns the text to the right
+                          speed: const Duration(milliseconds: 55),
+                          'قال رسول الله صلى الله عليه وسلم:الماهر بالقرآن مع السفرة الكرام البررة، والذي يقرأ القرآن ويتتعتع فيه وهو عليه شاق له أجران'),
+                    ],
+                    isRepeatingAnimation: false,
+                    // onTap: () {
+                    //   print("Tap Event");
+                    // },
+                  ),
                 ),
               ),
             ),
